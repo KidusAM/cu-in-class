@@ -6,7 +6,7 @@
         <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="common.js"></script>
-        <script src="professor.js"></script>
+        <script src="student.js"></script>
     </head>
 
     <body>
@@ -14,18 +14,20 @@
             <div class='row'>
                 <div class='col-6' id='questions-header'>
                     <div class='row'>
-                        <div class='col-3'> Student </div>
-                        <div class='col-9'> Question </div>
+                        <div class='col-12'> Questions </div>
                     </div>
                 </div>
-                <div class='col-6' id='questions-header'>
-                    <div class='row'>
-                        <div class='col-8'> Student ID </div>
-                        <div class='col-4'> Present?</div>
-                    </div>
-                </div>
+                <div class='col-6'></div>
                 <div class='col-6' id='questions-container'>  </div>
-                <div class='col-6' id='attendance-container'>  </div>
+                <div class='col-6' id='ask-questions-container'> 
+                    <div class="alert alert-success" role="alert"
+                        id='submit-question-success'> </div>
+                    <div class="alert alert-danger" role="alert"
+                        id='submit-question-failure'> </div>
+                    <input type="text" class="form-control"
+                    id="ask-question-text" placeholder="Enter your question">
+                    <button class='btn btn-primary' id='submit-question'> Submit </button>
+                </div>
             </div>
         </div>
     </body>
