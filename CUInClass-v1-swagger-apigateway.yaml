@@ -17,15 +17,6 @@ paths:
           description: "200 response"
           schema:
             $ref: "#/definitions/Empty"
-      x-amazon-apigateway-integration:
-        type: "aws_proxy"
-        httpMethod: "POST"
-        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:308030062589:function:cu_in_class_handler/invocations"
-        responses:
-          default:
-            statusCode: "200"
-        passthroughBehavior: "when_no_match"
-        contentHandling: "CONVERT_TO_TEXT"
     options:
       consumes:
       - "application/json"
@@ -43,18 +34,6 @@ paths:
               type: "string"
             Access-Control-Allow-Headers:
               type: "string"
-      x-amazon-apigateway-integration:
-        type: "mock"
-        responses:
-          default:
-            statusCode: "200"
-            responseParameters:
-              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
-              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
-              method.response.header.Access-Control-Allow-Origin: "'*'"
-        requestTemplates:
-          application/json: "{\"statusCode\": 200}"
-        passthroughBehavior: "when_no_match"
   /get_questions:
     get:
       produces:
@@ -64,15 +43,6 @@ paths:
           description: "200 response"
           schema:
             $ref: "#/definitions/Empty"
-      x-amazon-apigateway-integration:
-        type: "aws_proxy"
-        httpMethod: "POST"
-        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:308030062589:function:cu_in_class_handler/invocations"
-        responses:
-          default:
-            statusCode: "200"
-        passthroughBehavior: "when_no_match"
-        contentHandling: "CONVERT_TO_TEXT"
     options:
       consumes:
       - "application/json"
@@ -90,18 +60,6 @@ paths:
               type: "string"
             Access-Control-Allow-Headers:
               type: "string"
-      x-amazon-apigateway-integration:
-        type: "mock"
-        responses:
-          default:
-            statusCode: "200"
-            responseParameters:
-              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
-              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
-              method.response.header.Access-Control-Allow-Origin: "'*'"
-        requestTemplates:
-          application/json: "{\"statusCode\": 200}"
-        passthroughBehavior: "when_no_match"
   /mark_present:
     post:
       produces:
@@ -111,15 +69,6 @@ paths:
           description: "200 response"
           schema:
             $ref: "#/definitions/Empty"
-      x-amazon-apigateway-integration:
-        type: "aws_proxy"
-        httpMethod: "POST"
-        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:308030062589:function:cu_in_class_handler/invocations"
-        responses:
-          default:
-            statusCode: "200"
-        passthroughBehavior: "when_no_match"
-        contentHandling: "CONVERT_TO_TEXT"
     options:
       consumes:
       - "application/json"
@@ -137,18 +86,6 @@ paths:
               type: "string"
             Access-Control-Allow-Headers:
               type: "string"
-      x-amazon-apigateway-integration:
-        type: "mock"
-        responses:
-          default:
-            statusCode: "200"
-            responseParameters:
-              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
-              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
-              method.response.header.Access-Control-Allow-Origin: "'*'"
-        requestTemplates:
-          application/json: "{\"statusCode\": 200}"
-        passthroughBehavior: "when_no_match"
   /post_question:
     post:
       produces:
@@ -158,15 +95,6 @@ paths:
           description: "200 response"
           schema:
             $ref: "#/definitions/Empty"
-      x-amazon-apigateway-integration:
-        type: "aws_proxy"
-        httpMethod: "POST"
-        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:308030062589:function:cu_in_class_handler/invocations"
-        responses:
-          default:
-            statusCode: "200"
-        passthroughBehavior: "when_no_match"
-        contentHandling: "CONVERT_TO_TEXT"
     options:
       consumes:
       - "application/json"
@@ -184,18 +112,6 @@ paths:
               type: "string"
             Access-Control-Allow-Headers:
               type: "string"
-      x-amazon-apigateway-integration:
-        type: "mock"
-        responses:
-          default:
-            statusCode: "200"
-            responseParameters:
-              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
-              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
-              method.response.header.Access-Control-Allow-Origin: "'*'"
-        requestTemplates:
-          application/json: "{\"statusCode\": 200}"
-        passthroughBehavior: "when_no_match"
 definitions:
   Empty:
     type: "object"
